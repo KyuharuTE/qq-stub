@@ -25,7 +25,7 @@ public class MsfMessagePair {
     public MsfMessagePair(ToServiceMsg toServiceMsg, FromServiceMsg fromServiceMsg) {
         IPatchRedirector iPatchRedirector = $redirector_;
         if (iPatchRedirector != null && iPatchRedirector.hasPatch((short) 2)) {
-            iPatchRedirector.redirect((short) 2, (Object) this, (Object) toServiceMsg, (Object) fromServiceMsg);
+            iPatchRedirector.redirect((short) 2, this, toServiceMsg, fromServiceMsg);
             return;
         }
         this.sendProcess = null;
