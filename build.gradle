@@ -13,5 +13,6 @@ android {
     dependencies {
         // androidx nullability stubs
         compileOnly("androidx.annotation:annotation:1.6.0")
+        compileOnly(libs.androidx.lifecycle.common.jvm)
     }
 }
