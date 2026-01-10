@@ -39,7 +39,7 @@ public final class MsgElement implements IKernelModel, Serializable {
     FaceElement faceElement;
     FileElement fileElement;
     GiphyElement giphyElement;
-    GrayTipElement grayTipElement;
+    com.tencent.qqnt.kernelpublic.nativeinterface.GrayTipElement grayTipElement;
     InlineKeyboardElement inlineKeyboardElement;
     LiveGiftElement liveGiftElement;
     MarkdownElement markdownElement;
@@ -118,9 +118,9 @@ public final class MsgElement implements IKernelModel, Serializable {
         return redirector != null ? (GiphyElement) redirector.redirect((short) 20, this) : this.giphyElement;
     }
 
-    public GrayTipElement getGrayTipElement() {
+    public com.tencent.qqnt.kernelpublic.nativeinterface.GrayTipElement getGrayTipElement() {
         IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93575, (short) 13);
-        return redirector != null ? (GrayTipElement) redirector.redirect((short) 13, this) : this.grayTipElement;
+        return redirector != null ? (com.tencent.qqnt.kernelpublic.nativeinterface.GrayTipElement) redirector.redirect((short) 13, this) : this.grayTipElement;
     }
 
     public InlineKeyboardElement getInlineKeyboardElement() {
@@ -298,7 +298,7 @@ public final class MsgElement implements IKernelModel, Serializable {
         }
     }
 
-    public void setGrayTipElement(GrayTipElement grayTipElement) {
+    public void setGrayTipElement(com.tencent.qqnt.kernelpublic.nativeinterface.GrayTipElement grayTipElement) {
         IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93575, (short) 41);
         if (redirector != null) {
             redirector.redirect((short) 41, this, grayTipElement);
@@ -468,7 +468,7 @@ public final class MsgElement implements IKernelModel, Serializable {
         return "MsgElement{elementType=" + this.elementType + ",elementId=" + this.elementId + ",extBufForUI=" + this.extBufForUI + ",textElement=" + this.textElement + ",faceElement=" + this.faceElement + ",marketFaceElement=" + this.marketFaceElement + ",replyElement=" + this.replyElement + ",picElement=" + this.picElement + ",pttElement=" + this.pttElement + ",videoElement=" + this.videoElement + ",grayTipElement=" + this.grayTipElement + ",arkElement=" + this.arkElement + ",fileElement=" + this.fileElement + ",liveGiftElement=" + this.liveGiftElement + ",markdownElement=" + this.markdownElement + ",structLongMsgElement=" + this.structLongMsgElement + ",multiForwardMsgElement=" + this.multiForwardMsgElement + ",giphyElement=" + this.giphyElement + ",walletElement=" + this.walletElement + ",inlineKeyboardElement=" + this.inlineKeyboardElement + ",textGiftElement=" + this.textGiftElement + ",calendarElement=" + this.calendarElement + ",yoloGameResultElement=" + this.yoloGameResultElement + ",avRecordElement=" + this.avRecordElement + ",structMsgElement=" + this.structMsgElement + ",faceBubbleElement=" + this.faceBubbleElement + ",shareLocationElement=" + this.shareLocationElement + ",tofuRecordElement=" + this.tofuRecordElement + ",}";
     }
 
-    public MsgElement(int i2, long j2, byte[] bArr, TextElement textElement, FaceElement faceElement, MarketFaceElement marketFaceElement, ReplyElement replyElement, PicElement picElement, PttElement pttElement, VideoElement videoElement, GrayTipElement grayTipElement, ArkElement arkElement, FileElement fileElement, LiveGiftElement liveGiftElement, MarkdownElement markdownElement, StructLongMsgElement structLongMsgElement, MultiForwardMsgElement multiForwardMsgElement, GiphyElement giphyElement, WalletElement walletElement, InlineKeyboardElement inlineKeyboardElement, TextGiftElement textGiftElement, CalendarElement calendarElement, YoloGameResultElement yoloGameResultElement, AVRecordElement aVRecordElement, StructMsgElement structMsgElement, FaceBubbleElement faceBubbleElement, ShareLocationElement shareLocationElement, TofuRecordElement tofuRecordElement) {
+    public MsgElement(int i2, long j2, byte[] bArr, TextElement textElement, FaceElement faceElement, MarketFaceElement marketFaceElement, ReplyElement replyElement, PicElement picElement, PttElement pttElement, VideoElement videoElement, com.tencent.qqnt.kernelpublic.nativeinterface.GrayTipElement grayTipElement, ArkElement arkElement, FileElement fileElement, LiveGiftElement liveGiftElement, MarkdownElement markdownElement, StructLongMsgElement structLongMsgElement, MultiForwardMsgElement multiForwardMsgElement, GiphyElement giphyElement, WalletElement walletElement, InlineKeyboardElement inlineKeyboardElement, TextGiftElement textGiftElement, CalendarElement calendarElement, YoloGameResultElement yoloGameResultElement, AVRecordElement aVRecordElement, StructMsgElement structMsgElement, FaceBubbleElement faceBubbleElement, ShareLocationElement shareLocationElement, TofuRecordElement tofuRecordElement) {
         IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93575, (short) 2);
         if (redirector != null) {
             redirector.redirect((short) 2, this, Integer.valueOf(i2), Long.valueOf(j2), bArr, textElement, faceElement, marketFaceElement, replyElement, picElement, pttElement, videoElement, grayTipElement, arkElement, fileElement, liveGiftElement, markdownElement, structLongMsgElement, multiForwardMsgElement, giphyElement, walletElement, inlineKeyboardElement, textGiftElement, calendarElement, yoloGameResultElement, aVRecordElement, structMsgElement, faceBubbleElement, shareLocationElement, tofuRecordElement);
