@@ -1,107 +1,124 @@
-/*
- * QAuxiliary - An Xposed module for QQ/TIM
- * Copyright (C) 2019-2023 QAuxiliary developers
- * https://github.com/cinit/QAuxiliary
- *
- * This software is non-free but opensource software: you can redistribute it
- * and/or modify it under the terms of the GNU Affero General Public License
- * as published by the Free Software Foundation; either
- * version 3 of the License, or any later version and our eula as published
- * by QAuxiliary contributors.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Affero General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * and eula along with this software.  If not, see
- * <https://www.gnu.org/licenses/>
- * <https://github.com/cinit/QAuxiliary/blob/master/LICENSE.md>.
- */
-
 package com.tencent.qqnt.kernel.nativeinterface;
 
-import com.tencent.mobileqq.qfix.redirect.IPatchRedirector;
-import com.tencent.mobileqq.qfix.redirect.PatchRedirectCenter;
+import java.util.HashMap;
 
-/* compiled from: P */
-/* loaded from: classes2.dex */
 public final class MsgAttributeInfo {
-    long attrId;
-    int attrType;
-    TempChatGameSession gameChatSession;
-    GroupHonor groupHonor;
-    KingHonor kingHonor;
-    PublicAccountAttrs publicAccountAttrs;
-    SharedMsgInfo sharedMsgInfo;
-    UinInfoAttr uinInfoAttr;
-    VASMsgElement vasMsgInfo;
-    VASAIOPersonalElement vasPersonalInfo;
+    public AdelieMsgAttr adelieMsgAttr;
+    public AttaReportData attaReportData;
+    public long attrId;
+    public int attrType;
+    public HashMap<Integer, ExtendBusinessAttr> extendBusiness;
+    public FeedBackStateInfo feedBackStateInfo;
+    public TempChatGameSession gameChatSession;
+    public GroupDragonLadderAttr groupDragonLadder;
+    public GroupHonor groupHonor;
+    public KingHonor kingHonor;
+    public LiteActionAttr liteAction;
+    public LongMsgAttr longMsgAttr;
+    public MemoryStateMsgInfo memoryStateMsgInfo;
+    public PublicAccountAttrs publicAccountAttrs;
+    public QQConnectAttr qqConnectAttr;
+    public RobotMsgExt robotExt;
+    public SendMsgRspTransSvrInfoAttr sendMsgRspTransSvrInfo;
+    public SharedMsgInfo sharedMsgInfo;
+    public UinInfoAttr uinInfoAttr;
+    public VASMsgElement vasMsgInfo;
+    public VASAIOPersonalElement vasPersonalInfo;
+    public ZPlanMsgElement zPlanMsgInfo;
 
     public MsgAttributeInfo() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 1);
-        if (redirector != null) {
-            redirector.redirect((short) 1, this);
-        }
+    }
+
+    public AdelieMsgAttr getAdelieMsgAttr() {
+        return this.adelieMsgAttr;
+    }
+
+    public AttaReportData getAttaReportData() {
+        return this.attaReportData;
     }
 
     public long getAttrId() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 4);
-        return redirector != null ? ((Long) redirector.redirect((short) 4, this)).longValue() : this.attrId;
+        return this.attrId;
     }
 
     public int getAttrType() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 3);
-        return redirector != null ? ((Integer) redirector.redirect((short) 3, this)).intValue() : this.attrType;
+        return this.attrType;
+    }
+
+    public HashMap<Integer, ExtendBusinessAttr> getExtendBusiness() {
+        return this.extendBusiness;
+    }
+
+    public FeedBackStateInfo getFeedBackStateInfo() {
+        return this.feedBackStateInfo;
     }
 
     public TempChatGameSession getGameChatSession() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 11);
-        return redirector != null ? (TempChatGameSession) redirector.redirect((short) 11, this) : this.gameChatSession;
+        return this.gameChatSession;
+    }
+
+    public GroupDragonLadderAttr getGroupDragonLadder() {
+        return this.groupDragonLadder;
     }
 
     public GroupHonor getGroupHonor() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 7);
-        return redirector != null ? (GroupHonor) redirector.redirect((short) 7, this) : this.groupHonor;
+        return this.groupHonor;
     }
 
     public KingHonor getKingHonor() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 8);
-        return redirector != null ? (KingHonor) redirector.redirect((short) 8, this) : this.kingHonor;
+        return this.kingHonor;
+    }
+
+    public LiteActionAttr getLiteAction() {
+        return this.liteAction;
+    }
+
+    public LongMsgAttr getLongMsgAttr() {
+        return this.longMsgAttr;
+    }
+
+    public MemoryStateMsgInfo getMemoryStateMsgInfo() {
+        return this.memoryStateMsgInfo;
     }
 
     public PublicAccountAttrs getPublicAccountAttrs() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 9);
-        return redirector != null ? (PublicAccountAttrs) redirector.redirect((short) 9, this) : this.publicAccountAttrs;
+        return this.publicAccountAttrs;
+    }
+
+    public QQConnectAttr getQqConnectAttr() {
+        return this.qqConnectAttr;
+    }
+
+    public RobotMsgExt getRobotExt() {
+        return this.robotExt;
+    }
+
+    public SendMsgRspTransSvrInfoAttr getSendMsgRspTransSvrInfo() {
+        return this.sendMsgRspTransSvrInfo;
     }
 
     public SharedMsgInfo getSharedMsgInfo() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 10);
-        return redirector != null ? (SharedMsgInfo) redirector.redirect((short) 10, this) : this.sharedMsgInfo;
+        return this.sharedMsgInfo;
     }
 
     public UinInfoAttr getUinInfoAttr() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 12);
-        return redirector != null ? (UinInfoAttr) redirector.redirect((short) 12, this) : this.uinInfoAttr;
+        return this.uinInfoAttr;
     }
 
     public VASMsgElement getVasMsgInfo() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 5);
-        return redirector != null ? (VASMsgElement) redirector.redirect((short) 5, this) : this.vasMsgInfo;
+        return this.vasMsgInfo;
     }
 
     public VASAIOPersonalElement getVasPersonalInfo() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 6);
-        return redirector != null ? (VASAIOPersonalElement) redirector.redirect((short) 6, this) : this.vasPersonalInfo;
+        return this.vasPersonalInfo;
+    }
+
+    public ZPlanMsgElement getZPlanMsgInfo() {
+        return this.zPlanMsgInfo;
     }
 
     public String toString() {
-        IPatchRedirector redirector = PatchRedirectCenter.getRedirector(93552, (short) 13);
-        if (redirector != null) {
-            return (String) redirector.redirect((short) 13, this);
-        }
-        return "MsgAttributeInfo{attrType=" + this.attrType + ",attrId=" + this.attrId + ",vasMsgInfo=" + this.vasMsgInfo + ",vasPersonalInfo=" + this.vasPersonalInfo + ",groupHonor=" + this.groupHonor + ",kingHonor=" + this.kingHonor + ",publicAccountAttrs=" + this.publicAccountAttrs + ",sharedMsgInfo=" + this.sharedMsgInfo + ",gameChatSession=" + this.gameChatSession + ",uinInfoAttr=" + this.uinInfoAttr + ",}";
+        return "MsgAttributeInfo{attrType=" + this.attrType + ",attrId=" + this.attrId + ",vasMsgInfo=" + this.vasMsgInfo + ",vasPersonalInfo=" + this.vasPersonalInfo + ",groupHonor=" + this.groupHonor + ",kingHonor=" + this.kingHonor + ",publicAccountAttrs=" + this.publicAccountAttrs + ",sharedMsgInfo=" + this.sharedMsgInfo + ",gameChatSession=" + this.gameChatSession + ",uinInfoAttr=" + this.uinInfoAttr + ",longMsgAttr=" + this.longMsgAttr + ",robotExt=" + this.robotExt + ",zPlanMsgInfo=" + this.zPlanMsgInfo + ",qqConnectAttr=" + this.qqConnectAttr + ",extendBusiness=" + this.extendBusiness + ",sendMsgRspTransSvrInfo=" + this.sendMsgRspTransSvrInfo + ",adelieMsgAttr=" + this.adelieMsgAttr + ",feedBackStateInfo=" + this.feedBackStateInfo + ",memoryStateMsgInfo=" + this.memoryStateMsgInfo + ",attaReportData=" + this.attaReportData + ",liteAction=" + this.liteAction + ",groupDragonLadder=" + this.groupDragonLadder + ",}";
     }
 
     // For QQ 8.9.63
@@ -113,4 +130,6 @@ public final class MsgAttributeInfo {
     // For QQ 8.9.70
     public MsgAttributeInfo(int attrType, long attrId, VASMsgElement vASMsgElement, VASAIOPersonalElement vASAIOPersonalElement, GroupHonor groupHonor, KingHonor kingHonor, PublicAccountAttrs publicAccountAttrs, SharedMsgInfo sharedMsgInfo, TempChatGameSession tempChatGameSession, UinInfoAttr uinInfoAttr, LongMsgAttr longMsgAttr, RobotMsgExt robotMsgExt, ZPlanMsgElement zPlanMsgElement) {}
 
+    // For QQ 9.2.0
+    public MsgAttributeInfo(int i, long j, VASMsgElement vASMsgElement, VASAIOPersonalElement vASAIOPersonalElement, GroupHonor groupHonor, KingHonor kingHonor, PublicAccountAttrs publicAccountAttrs, SharedMsgInfo sharedMsgInfo, TempChatGameSession tempChatGameSession, UinInfoAttr uinInfoAttr, LongMsgAttr longMsgAttr, RobotMsgExt robotMsgExt, ZPlanMsgElement zPlanMsgElement, QQConnectAttr qQConnectAttr, HashMap<Integer, ExtendBusinessAttr> hashMap, SendMsgRspTransSvrInfoAttr sendMsgRspTransSvrInfoAttr, AdelieMsgAttr adelieMsgAttr, FeedBackStateInfo feedBackStateInfo, MemoryStateMsgInfo memoryStateMsgInfo) {}
 }
