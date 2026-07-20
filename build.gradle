@@ -1,18 +1,19 @@
 apply plugin: 'com.android.library'
 
 android {
-    namespace "me.teble.xposed.stub"
-    compileSdkVersion 32
+    namespace = "me.teble.xposed.stub"
+    compileSdk = 32
+    enableKotlin = false
     defaultConfig {
-        minSdkVersion 21
+        minSdk = 21
     }
-    lintOptions {
-        abortOnError false
+    lint {
+        abortOnError = false
     }
 
     dependencies {
         // androidx nullability stubs
         compileOnly("androidx.annotation:annotation:1.6.0")
-        compileOnly(libs.androidx.lifecycle.common.jvm)
+        compileOnly(libs.androidx.lifecycle.common)
     }
 }
